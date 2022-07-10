@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": [
+    "react-hooks",
+  ],
+  "rules": {
+    "eqeqeq": "off", //warn or off
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": "warn",
+    "array-callback-return": "off",
+    "jsx-a11y/alt-text": "warn",
+    "react/jsx-no-target-blank": "warn",
+    "no-use-before-define": "warn",
+    "no-template-curly-in-string": "off"
+  }
 }
