@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import PriceNear from "../components/PriceNear";
 import { UserAvatar } from "../components/User";
-import { BadgeLike, BadgeComingSoon, BadgeGas } from "./Badge";
 import Button from "../components/Button";
+import { useDispatch } from "react-redux";
+import { BadgeLike, BadgeComingSoon, BadgeGas } from "../components/Badge";
+import { setModalVisible } from "../store/sliceModal";
+import TokenCardDetail from "./TokenCardDetail";
 
 const TokenCardComponent = styled.div`
   margin: 0 auto;
@@ -26,6 +29,7 @@ const TokenMedia = styled.div`
   height: 300px;
   background-color: #7a798a;
   position: relative;
+  cursor: pointer;
 
   .badge-like {
     position: absolute;
@@ -96,6 +100,8 @@ const TokenDetail = styled.div`
 `;
 
 export default function TokenCard({ className }) {
+  const dispatch = useDispatch();
+
   return (
     <TokenCardComponent className={"token-card " + className}>
       <TokenCardContainerComponent>
@@ -135,6 +141,14 @@ export default function TokenCard({ className }) {
               type={"transparent"}
               label={"Viw Detail"}
               icon={"arrow-circle"}
+              onClick={() => {
+                dispatch(
+                  setModalVisible({
+                    visible: true,
+                    content: <TokenCardDetail />,
+                  })
+                );
+              }}
             />
           </div>
         </TokenDetail>

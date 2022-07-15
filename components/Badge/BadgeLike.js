@@ -5,7 +5,7 @@ const BadgeLikeComponent = styled(Badge)`
   background-color: #000;
 `;
 
-export default function BadgeLike({ label = 0, onClick }) {
+export default function BadgeLike({ label = "0", onClick }) {
   return (
     <BadgeLikeComponent
       className={"badge-like"}

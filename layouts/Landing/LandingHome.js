@@ -1,17 +1,19 @@
 import styled from "styled-components";
-import Button from "../Button";
+import Button from "../../components/Button";
 
 const LandingHomeComponent = styled.div`
   display: none;
 
   @media only screen and (min-width: 768px) {
-    display: block;
-    height: 420px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
   }
 `;
 const LandingHomeContainerComponent = styled.div`
+  width: 100%;
+
   @media only screen and (min-width: 768px) {
-    margin: 0 auto;
     height: 500px;
     position: relative;
 
@@ -53,7 +55,7 @@ const LandingHomeSpot2 = styled.div`
   width: 150px;
   height: 70px;
   right: 30%;
-  bottom: 0px;
+  bottom: 90px;
   filter: blur(70px);
   transform: rotate(-180deg);
 `;
@@ -105,6 +107,22 @@ const TextBox = styled.div`
     max-width: 1500px;
   }
 `;
+const ZsapceBoy = styled.img`
+  position: absolute;
+  object-fit: contain;
+  top: 0px;
+  right: -150px;
+  width: 700px;
+  height: 100%;
+  display: none;
+  @media only screen and (min-width: 1024px) {
+    display: block;
+    right: -100px;
+  }
+  @media only screen and (min-width: 1600px) {
+    right: -70px;
+  }
+`;
 
 export default function LandingHome() {
   return (
@@ -125,6 +143,11 @@ export default function LandingHome() {
             <Button icon={"doc"} label={"Create"} type={"white"} />
           </div>
         </TextBox>
+        <ZsapceBoy
+          className={"zspace-boy"}
+          src={"/zspace-boy.png"}
+          alt={"zspace-boy"}
+        />
       </LandingHomeContainerComponent>
     </LandingHomeComponent>
   );

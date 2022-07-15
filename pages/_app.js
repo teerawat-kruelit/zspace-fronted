@@ -1,7 +1,14 @@
+import { wrapper } from "../store";
+import Modal from "../components/Modal";
 import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Modal className={"modal"} />
+    </>
+  );
 }
 
-export default MyApp;
+export default wrapper.withRedux(App);

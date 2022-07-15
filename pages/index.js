@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar";
-import TopUsers from "../components/TopUsers";
-import LandingHome from "../components/Landing/LandingHome";
-import FeedTokenCard from "../components/FeedToken";
-import Footer from "../components/Footer";
+import Navbar from "../layouts/Navbar";
+import TopUsers from "../layouts/TopUsers";
+import LandingHome from "../layouts/Landing/LandingHome";
+import FeedTokenCard from "../layouts/FeedToken";
+import Footer from "../layouts/Footer";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Home | Zspace</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <Navbar />
       <LandingHome />

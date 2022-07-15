@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import PriceNear from "./PriceNear";
-import { UserAvatar } from "./User";
+import PriceNear from "../components/PriceNear";
+import { UserAvatar } from "../components/User";
 
 const TopUsersComponent = styled.div`
   padding: 5px 10px;

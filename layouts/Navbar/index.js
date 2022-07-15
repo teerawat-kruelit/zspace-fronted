@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Logo from "../Logo";
-import Button from "../Button";
+import Logo from "../../components/Logo";
+import Button from "../../components/Button";
 import Menus from "./Menus";
 
 const NavbarComponent = styled.div`

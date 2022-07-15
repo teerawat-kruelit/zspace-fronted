@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import Logo from "./Logo";
+import Logo from "../components/Logo";
 import Link from "next/link";
 import { Input } from "../components/Form";
-import { BadgeFB, BadgeTwitter, BadgeGoogle, BadgeDiscord } from "./Badge";
+import {
+  BadgeFB,
+  BadgeTwitter,
+  BadgeGoogle,
+  BadgeDiscord,
+} from "../components/Badge";
 import Button from "../components/Button";
 
 const FooterComponent = styled.div`
@@ -232,7 +237,7 @@ export default function Footer() {
           <div className="footer__sub">
             <div className="footer__sub-header">Subscribe Us</div>
             <div className="footer__sub-form">
-              <Input placeHolder={"Info@lazyworld.tech"} />
+              <Input placeholder={"Info@lazyworld.tech"} />
               <Button icon={"arrow-send"} type={"color"} />
             </div>
           </div>

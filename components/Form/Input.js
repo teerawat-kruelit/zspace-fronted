@@ -23,11 +23,11 @@ const InputComponent = styled(AntdInput)`
   }
 `;
 
-export default function Input({ className, placeHolder }) {
+export default function Input({ className, placeholder }) {
   return (
     <InputComponent
       className={className}
-      placeHolder={placeHolder}
+      placeholder={placeholder}
       size={"large"}
     />
   );

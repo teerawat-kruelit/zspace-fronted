@@ -34,7 +34,6 @@ const ButtonComponent = styled(AntdButton)`
   }
 
   &.btn-white {
-    color: #000;
     background-color: #fff;
     border: none;
     span {
@@ -46,7 +45,6 @@ const ButtonComponent = styled(AntdButton)`
   }
 
   &.btn-color {
-    color: #000;
     background-color: #5142fc;
     border: none;
     span {
@@ -54,6 +52,15 @@ const ButtonComponent = styled(AntdButton)`
     }
     &:hover {
       background-color: #5142fc;
+    }
+  }
+
+  &.btn-black {
+    background-color: #000;
+    border: none;
+
+    &:hover {
+      background-color: #000;
     }
   }
 
@@ -83,7 +90,7 @@ const ButtonComponent = styled(AntdButton)`
 
 /**
  * @param {{
- * type: "primary" | "transparent" | "white"  | "color";
+ * type: "primary" | "transparent" | "white"  | "color" | "black";
  * }} props
  */
 
